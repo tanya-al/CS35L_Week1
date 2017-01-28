@@ -1,0 +1,71 @@
+CS 35L Homework 1 Exercises
+Exercise 1.1: Moving Around in Emacs
+1. -skip- 
+2. C-s U T F - 8 
+3. Enter C-s I n s t r u c t i o n s
+4. Enter M-< C-s H T M L Enter C-u 3 C-b
+5. M-< C-s a r r o w
+6. Enter C-e
+7. C-a
+8. M-<
+9. No, I have not used the arrow keys.
+10. see above
+11. -skip-
+Exercise 1.2: Deleting Text in Emacs
+1. -skip-
+2. C-u 18 C-n C-u 4 M-k 
+3. C-s D E Enter C-a C-k
+4. C-s h t t p : / / e n . w i k i p e d i a C-s Enter C-p C-a M-k M-k 
+5. C-s < ! Enter M-b M-f C-@ M-f M-b C-b C-b C-b C-w
+Exercise 1.3: Inserting Text in Emacs
+1. -skip-
+2. C-s A Enter M-f C-f C-f Backspace 3 7 C-s A Enter M-f M-f Backspace 3 7
+3. M-< C-s U T F - 8 Enter Backspace Backspace Backspace Backspace Backspace U S
+- A S C I I 
+4. M-< C-s < o l > Enter Enter 
+5. -skip-
+Exercise 1.4: Other editing tasks in Emacs
+1. -skip-
+2. -skip-
+3. M-> C-r < ! Enter C-@ M-f M-b C-b C-b C-b M-w C-r < p > s h C-r Enter C-e M-b
+C-u 3 C-b C-y
+4. M-> M-v C-f C-@ C-n C-n C-e M-w C-r < h 2 > S u b m i t C-r Enter C-n C-n C-y
+M-> M-v C-u 9 C-p C-@ C-e M-w C-r < h 2 > H o m e w o r k C-r Enter C-n C-n C-y
+M-> M-v M-v C-p C-f C-@ C-n C-n C-e M-w C-r < h 2 > L a b Enter C-n C-n C-y
+5. M-> M-v M-v C-u 7 C-p C-@ M-> C-w 
+6. C-_ 
+7. M-v M-v C-u 7 C-p < ! - - M-> - - > 
+8. M-< C-s < o l > 
+I found 7 instances of <ol>. 
+Enter M-< M-x r e p l a c e - s t r i n g Enter < o l > Enter < O l > Enter 
+9. -skip-
+Exercise 1.5: Doing commands in Emacs
+1. M-! m k d i r   ~ / j u n k 
+2. -skip-
+3. M-x c o m p i l e Enter Backspace Backspace Backspace Backspace Backspace
+Backspace Backspace Backspace g c c   -o   h e l l o . c   h e l l o Enter 
+4. C-x 1 M-! . / h e l l o   > h e l l o - o u t
+5. M-! c a t   ~ / j u n k / h e l l o - o u t   > > k e y 1 . t x t
+#include <stdio.h>
+int
+main (void)
+{
+  char n = '\n';
+  char b = '\\';
+  char q = '"';
+  char const *p = "#include <stdio.h>%cint%cmain (void)%c{%c  char n = '%cn';%c  char b = '%c%c';%c  char q = '%c';%c  char const *p = %c%s%c;%c  printf (p, n, n, n, n, b, n, b, b, n, q, n, q, p, q, n, n, n, n);%c  return 0;%c}%c";
+  printf (p, n, n, n, n, b, n, b, b, n, q, n, q, p, q, n, n, n, n);
+  return 0;
+}
+Exercise 1.6: Running Elisp code
+1. C-x b * s c r a t c h * Enter
+2. ( r a n d o m ) C-j 
+3. ( s e t q   x   ( r a n d o m ) ) C-j 
+   ( s e t q   y   ( r a n d o m ) ) C-j
+   ( s e t q   z   ( r a n d o m ) ) C-j
+4. ( *   x   y   z ) C-j 
+   The result given is apparently another random number 
+5. M-: ( *   x   y   z ) Enter gives the same answer as in number 4. 
+6. The "random" numbers are actually psuedo random, so evaluating an expression
+with random numbers returns a "random" value and doing that same expression
+again will return the same "random" value.

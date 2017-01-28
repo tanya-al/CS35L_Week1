@@ -1,0 +1,46 @@
+CS 35L Spring 2016 Tanya Al-Rehani Lab Week 1
+1. man -K [filename]
+2. which cp :	/bin/cp
+   which wc : /usr/bin/wc
+3. Use "find /usr/bin -name '?' -executable" to get the answer. w and X are the
+two executables that come up. X is the X Window System; w is an executable that
+shows who is logged on and what they are doing.
+4. Using the command readlink /usr/bins/emacs, we get
+/etc/alternatives/emacs. Repeating this process, we find /usr/bin/emacs-23.1 as
+the file that is actually run. This shows multiple symbolic links that act as
+back ups for the program.
+5. Look in the man page for chmod. g+s sets the group ID for execution
+permission, meaning that anyone running the process has access to files of the
+owner's group, but not the owner themself. o-x removes permission to run the
+file for everyone that is not the owner nor in the group.
+6. find / -mtime 21 (found in the man page for find).
+7. find / -mtime 21 -type d (type d for directory filetypes).
+8. find is in the /usr/bin directory as shown by the whereis command. The
+command find . -type l | wc -l will search for all the symbolic links in the
+directory and wc -l will print the number of lines AKA the numer of programs
+found that are symbolic links AKA 354 lines.
+9. First, navigate to /usr/lib, then enter ls -t -l -F. This will print all the
+items in order of modification date with all their info and will append
+characters to identify what kind of file they are. I found libsoftokn3.chk which
+is the earliest regular file and libgamin-1.so.0.10 which is the earliest
+executable regular file.
+10. The locale command gets data from LC_*environment variables, as shown in its
+manual page. 
+11. Buffer-menu-sort, Buffer-menu-sort-by-column, ibuffer-invert-sorting,
+ibuffer-toggle-sorting-mode, rmail-sort-by-author, rmail-sort-by-correspondent,
+rmail-sort-by-date, rmail-sort-by-labels, rmail-sort-by-lines,
+rmail-sort-by-recipient, rmail-sort-by-subject, sort-columns, sort-fields,
+sort-lines, sort-numeric-fields, sort-pages, sort-paragraphs, sort-regexp-fields
+(as found by using C-h a).
+12. C-M-a moves the cursor to the beginning of the current or preceding
+defun. C-M-b moves backward over a balanced expression. C-M-c exits a recursive
+edit. C-M-d moves forward down one level of parantheses. C-M-e moves the cursor
+to the end of the current or following
+defun. C-M-f moves forward over a balanced expression. C-M-g is the original
+keyboard quit command that gets truncated to C-g. C-M-h marks the whole current
+or following defun.
+13. C-g quits a partially typed or still running command. 
+14. yank pastes the most recently killed text or block of text at the current
+cursor location in the current buffer.
+15. The Emacs dired command can list subdirectories whereas ls -l just lists the
+directories with their information.
